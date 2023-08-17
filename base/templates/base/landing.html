@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-page</title>
+
+    <link rel="stylesheet" href="{% static 'styles/landing.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.9.0/mdb.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.9.0/mdb.min.js"></script>
+</head>
+
+
+<body>
+    <div id="bgimage">
+          <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong sticky-top bg-body-tertiary">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Brand</a>
+                  <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-mdb-toggle="collapse"
+                      data-mdb-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                  >
+                      <i class="fas fa-bars"></i>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                          <!-- Navbar dropdown -->
+                          <li class="nav-item dropdown">
+                              <a
+                                  class="nav-link dropdown-toggle"
+                                  href="#"
+                                  id="navbarDropdown"
+                                  role="button"
+                                  data-mdb-toggle="dropdown"
+                                  aria-expanded="false"
+                              >
+                                  Features
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="#">Blogs</a></li>
+                                  <li><a class="dropdown-item" href="#">Videos</a></li>
+                                  <li><hr class="dropdown-divider" /></li>
+                                  <li><a class="dropdown-item" href="#">Community</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+          
+
+          <div class="brand-name">
+              <h1 style="font-weight: 900;">Sports Peer</h1>
+              <div id="subtext">play till you are tired</div>
+              <div id="register"><a>register</a></div>
+          </div>
+     </div>
+
+    <script>
+        new mdb.Dropdown(document.getElementById('navbarDropdown'));
+    </script>
+    
+
+
+    <div class = "frame" style="background-color:#222831;">
+      <div class = "match">
+        <div id = "image"></div>
+        <div id="teamA">Team A</div>
+        <div id="teamB"> Team B</div>
+      </div>
+
+      <div class = "options">
+        <a href = "{% url 'home' %}" style="text-decoration: none;"><div id="option1" style="color: white;text-transform: uppercase;"> <H1>join room</H1></div></a>
+        <div id="option2" style="color: white;text-transform: uppercase;"><h1>host tournament</h1></div> 
+        <div id="option3" style="color: white;text-transform: uppercase;"><h1>read blogs</h1></div>
+      </div>
+    </div>
+
+
+    <div class = "section" style="background-color: #1a1e25 ">
+      <main>
+        <section class="create-room">
+            <h2>Create a Sports Room</h2>
+            <p>In the dynamic and engaging world of sports, our website offers you the opportunity to create your very own sports room. Whether you're passionate about soccer, basketball, tennis, or any other sport, you can establish a virtual space where like-minded enthusiasts can gather, connect, and share their love for the game.</p>
+            <form>
+                <label for="sport">Select Sport:</label>
+                <select id="sport" name="sport">
+                    <option value="soccer">Soccer</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="tennis">Tennis</option>
+                    <!-- Add more sport options -->
+                </select>
+                <button type="submit">Create Room</button>
+            </form>
+        </section>
+
+        <section class="sports-chat">
+            <h2>Sports Chat</h2>
+            <p>Chatting about sports has never been more exciting! Our Sports Chat section provides you with a platform to engage in lively discussions, debates, and conversations with fellow sports aficionados. Picture this: you're watching a game, your heart racing with every goal, basket, or point scored. With Sports Chat, you don't have to experience these thrilling moments alone.</p>
+            <div class="chat-box">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <textarea placeholder="Type your message"></textarea>
+            <button class="send-button">Send</button>
+        </section>
+
+        <section class="tournaments-events">
+            <h2>Tournaments and Events</h2>
+            <p>Beyond discussions, our website takes sports enthusiasm to the next level with our Tournaments and Events section. Are you itching to put your strategic skills to the test? This is the place to be. Discover and participate in a range of tournaments hosted by sports enthusiasts just like you. From local showdowns to global championships, there's something for everyone.</p>
+            <!-- Tournament listings and details can be added here -->
+        </section>
+
+        <section class="sports-blog">
+            <h2>Sports Blog</h2>
+            <p>Dive deeper into the world of sports through our enriching Sports Blog section. Here, you'll find a treasure trove of articles, analyses, and editorials that explore the intricacies of your favorite sports. Our team of passionate writers and experts deliver captivating content, delving into the nuances of gameplay, the history of iconic moments, and the stories behind legendary athletes.</p>
+            <!-- Blog articles and content can be added here -->
+        </section>
+    </main>
+        </div>
+    </div>
+
+   
+    <footer>
+      <div class="footer-content">
+          <div class="footer-options">
+              <a href="#contact">Contact Us</a>
+              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#terms-of-service">Terms of Service</a>
+          </div>
+          <div class="footer-info">
+              &copy; 2023 Ajitesh's website. All rights reserved.
+              <br>
+              
+          </div>
+      </div>
+  </footer>
+
+  
+
+  
+
+
+</body>
+</html>

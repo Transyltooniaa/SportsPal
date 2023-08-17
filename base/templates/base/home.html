@@ -1,0 +1,59 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<style>
+    .home-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+</style>
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/home.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
+    {% endblock %}
+
+    <div class = "home-container ">
+        <div>
+            {% include 'base/topics_component.html' %}
+        </div>
+
+        <div class = "rooms">
+            <div id="rooms">
+                <h3>rooms</h3>
+            </div>
+
+            <div id="room_count">
+                <h5>{{room_count}} rooms available</h5>
+            </div>
+
+            <div id="create_room">
+                <a href = "{% url 'create-room' %}"> 
+                    <div id="plus">    
+                    </div>
+                    <button><i class="fa-solid fa-plus fa-rotate-90 fa-2xl" style="background-color: #71c6dd;position:relative; right: 20px;"></i> Create Room </button> </a>
+            </div>
+
+            <div class="all-rooms">
+                <p style="color: white;">All Rooms</p>
+            </div>
+
+            <div>
+                    {% include 'base/feed_component.html' %}
+                
+            </div>
+        </div>
+
+        <div>
+            {% include 'base/activity_component.html'%}
+        </div>
+
+    </div>
+
+{% endblock %}

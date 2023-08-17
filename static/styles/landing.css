@@ -1,0 +1,292 @@
+
+
+.match {
+  background-color: #222831;
+}
+
+#bgimage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/static/images/landing_images/footbal.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#bgimage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px; /* Adjust the value as needed */
+  font-family: "Montserrat", serif;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 70px; /* Adjust the value as needed */
+}
+
+.brand-name {
+  height: 200px;
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1.7;
+}
+
+#subtext {
+  position: fixed;
+  top: 127px;
+  color: white;
+}
+
+.match {
+  height: 350px;
+  width: 60vw;
+  position: relative;
+  left: 20vw;
+  background: linear-gradient(110deg, black 50%, #ee1e46 50%);
+  position: relative;
+  top: -80px;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+#image {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  margin-top: 20px;
+  position: relative;
+  left: 640px;
+  top: 90px;
+  background-image: url("/static/images/landing_images/images.png");
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  left: 360px;
+}
+
+#teamA,
+#teamB {
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  bottom: 20px;
+}
+
+#teamB {
+  position: relative;
+  left: 200px;
+  top: 20px;
+}
+
+#teamA {
+  position: relative;
+  left: 1px;
+  top: 20px;
+}
+
+.carouselExampleRide {
+  position: relative;
+  top: 700px;
+  height: 500px;
+  width: 100vw;
+  background: linear-gradient(110deg, black 50%, #ee1e46 50%);
+}
+
+.carousel-item {
+  height: 100px;
+  width: 100vw;
+  background: linear-gradient(110deg, black 50%, #ee1e46 50%);
+}
+
+.sports {
+  height: 50px;
+  width: 300px;
+  color: yellow;
+  position: relative;
+  top: 260px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value to control the darkness */
+  border-radius: 10px;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value to control the darkness */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-options a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+
+.options {
+  color: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+  margin: 30px;
+  margin-bottom: 0px;
+}
+
+.options div {
+        --s: 370px;   /* the size of the image */
+        --b: 10px;     /* the border thickness*/
+        --g: 20px;    /* the gap */
+        --c: #4ECDC4; /* the color */
+        
+        width: var(--s);
+        aspect-ratio: 1;
+        outline: calc(var(--s)/2) solid #0009;
+        outline-offset: calc(var(--s)/-2);
+        cursor: pointer;
+        transition: .3s;
+        color: black;
+    
+}
+
+#option1:hover  {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+#option2:hover  {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+#option3:hover  {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+}
+
+#option1,
+#option2,
+#option3 {
+  border-radius: 10px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #212529;
+  text-align: left;
+  height: 478.56px;
+  width: 369px;
+}
+
+#option1 {
+  background-image: url("/static/images/landing_images/tournament.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#option2 {
+  background-image: url("/static/images/landing_images/match.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#option3 {
+  background-image: url("/static/images/landing_images/news.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+
+#register{
+    height: 40px;
+    width: 100px;
+    background-color: #ee1e46;
+    position: absolute;
+    top: 180px;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+
+.section{
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Styling for hover state */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Styling for visited state */
+a:visited {
+  color: white;
+}
+
+/* Styling for active state */
+a:active {
+  color: green;
+}

@@ -1,0 +1,49 @@
+
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/feed_component.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
+{% endblock %}
+
+<div class = "sports-rooms">
+    {% for room in rooms %}
+        <div class = "room_feat">
+
+            <div id="host"> 
+                <a href="{% url 'user-profile' room.host.id %}"style="background-color:#3f4156;">Host @{{room.host.username}}</a>
+            </div>
+
+            <div style = "background-color: #3f4156;">
+                {{room.created|timesince}} ago
+            </div>
+
+
+            {% if room.host == request.user %}
+
+            <div id="edit">
+                <a href = "{% url 'update-room' room.id %}" style="background-color:#3f4156;">Edit</a>
+            </div>
+            
+            <div id="delete">
+                <a href = "{% url 'delete-room' room.id %}" style="background-color:#3f4156;">Delete </a>
+            </div>
+
+            {% endif %}
+
+            <div id="room_name">
+                <h5><a href = "{% url 'room' room.id %}" style="background-color:#3f4156;">{{room.name}}</a></h5>
+            </div>
+
+            <div id="topic_name">
+                <small style="background-color:#3f4156;">{{room.topic.name}}</small>
+            </div>
+
+            
+            <hr>
+        </div>
+    {% endfor %}
+</div>

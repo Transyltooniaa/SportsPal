@@ -1,0 +1,23 @@
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/topics_component.css' %}">
+{% endblock %}
+
+<h3 class = "Topics" style = "color: #696d97; text-transform: uppercase;top:10px;">Browse Topics</h3>
+
+<div class = "All">
+    <p><a href="{% url 'home' %}"  style="color: white; text-decoration: none;"><div>All</div></a> <span id = "total">{{room_count}}</span></p>
+</div>
+
+<div class = "items_all">
+    {% for topic in topics %}
+        <div class = "List">
+            <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}
+            <div id="count_div">
+                <span id = "count">{{topic.room_set.all.count}}</span></a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

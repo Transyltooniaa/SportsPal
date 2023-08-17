@@ -1,0 +1,53 @@
+
+
+.navbar{
+    display: flex;
+    background-color:#3f4156;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    padding: 10px;
+    height: 50px;
+}
+
+
+.navbar div{
+    background-color:#3f4156 ;
+    color: white;
+}
+
+
+    /* Style the logo */
+    .logo h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Style the search bar */
+    .search_bar input[type="text"] {
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+    }
+
+    /* Style the profile and logout links */
+    .profile p {
+        margin: 0;
+    }
+
+    /* Style the login link */
+    .login a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Style the logout link */
+    .logout a {
+        text-decoration: none;
+        color: white;
+    }
+

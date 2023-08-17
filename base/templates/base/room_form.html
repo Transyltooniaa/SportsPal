@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/room_form.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
+{% endblock %}
+
+<div class = "form">
+    <form method = "POST" action="">
+        {% csrf_token %}
+
+        <div class="entire_form">
+
+            <div class="form_title">
+                <h1>Create / Upadate room</h1>
+            </div>
+
+            <div class="form_entry">
+                {{form.as_p}} 
+            </div>
+            
+            <div id="submit">
+                <input type="submit" value="Submit" style = "z-index: 8;color: #3f4156;" />
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+```

@@ -1,0 +1,58 @@
+#rooms{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #e5e5e5;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+#room_count{
+    height: auto;
+    font-weight: 500;
+    color: #696d97;
+    font-size: 18px;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    top:50px;
+    height:50px;
+    left : -80px;
+    margin-top: 0px;
+
+}
+
+button{
+    background-color: #71c6dd;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    left : 210px;
+    top: 17px;
+    color:#3f4156;
+    height: 55px;
+    padding-bottom: 25px;
+    padding-top: 13px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transform: scale(0.9);
+}
+
+#create_room{
+    display: inline-block;
+}
+
+.room_feat{
+    position: relative;
+    top: 50px;
+}
+
