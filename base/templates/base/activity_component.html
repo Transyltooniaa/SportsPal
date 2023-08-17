@@ -31,7 +31,7 @@
             
             <div id="time" style="color: #8b8b8b; font-size: 12px; margin:3px; width:200px;">
                 {{message.created|timesince}} ago
-                <i class="fa-regular fa-user fa-2xl" style="position: relative;left:-170px;background-color:#3f4156;"></i> 
+                <i class="fa-regular fa-user fa-2xl" style="position: relative;left:-130px;background-color:#3f4156;"></i> 
             </div>
             
         </small>
@@ -41,12 +41,12 @@
             <small style="background-color: #3f4156; color:#b2bdbd; width: 200px;">replied to <tag style="background-color: #3f4156; color:cyan">"{{message.room}}"</tag></small>
         </div>
 
-        <div id="message">
+        <div id="message" style="position: relative;top:8px;">
             <p>{{message}}</p>
         </div>
 
             {% if request.user == message.user %}
-            <a href = "{% url 'delete-message' message.id %}" style="background-color: #3f4156; color:#EE4B2B; position: relative; left:210px; font-weight: 500px; text-decoration: none; top:5px;">Delete</a>
+            <a href = "{% url 'delete-message' message.id %}" style="background-color: #3f4156; color:#EE4B2B; position: relative; left:210px; font-weight: 500px; text-decoration: none; top:13px;">Delete</a>
             {% endif %}
 
     </div>

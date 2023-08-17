@@ -32,10 +32,14 @@
                 <a href = "{% url 'delete-room' room.id %}" style="background-color:#3f4156;">Delete </a>
             </div>
 
+            <div style = "background-color: #3f4156;">
+                {{room.participants.all.count}} Joined
+            </div>
+
             {% endif %}
 
             <div id="room_name">
-                <h5><a href = "{% url 'room' room.id %}" style="background-color:#3f4156;">{{room.name}}</a></h5>
+                <h5 style = "background-color: #3f4156;"><a href = "{% url 'room' room.id %}" style="background-color:#3f4156;">{{room.name}}</a></h5>
             </div>
 
             <div id="topic_name">
@@ -43,7 +47,7 @@
             </div>
 
             
-            <hr>
+
         </div>
     {% endfor %}
 </div>

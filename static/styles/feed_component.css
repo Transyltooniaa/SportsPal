@@ -36,13 +36,13 @@
 
 /* Styles for room name link */
 #room_name a {
-    color: #3f4156;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 #room_name a:hover {
-    color: #1a1c2c;
+    color: black;
 }
 
 /* Styles for topic name */

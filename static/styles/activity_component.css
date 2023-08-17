@@ -73,8 +73,8 @@ div .box{
     height : 60px;
     background-color: #2d2d39;
     position: relative;
-    left: 10px;
+    top:10px;
+    left: 20px;
     border-radius: 8px;
-
 }
 
