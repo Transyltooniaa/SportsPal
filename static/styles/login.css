@@ -1,0 +1,129 @@
+
+
+/* Add some spacing around the entire content */
+
+
+.login-form {
+    background-color: #3f4156;
+    width: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    left : 450px;
+    top : 250px;
+}
+
+.move {
+    margin-top: 20px;
+}
+
+#username_text, #password {
+    color: #b2bdbd;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+#username_input input, #password_input input {
+    background: transparent;
+    border: 1px solid #696d97;
+    padding: 18px;
+    border-radius: 5px;
+    width: 400px;
+    color: #e5e5e5;
+    font-weight: 500;
+    outline: none;
+    margin: 5px 0;
+    margin: 20px;
+    position: relative;
+    right : 20px;
+    font-size: 15px;
+    background-color: #3f4156;
+}
+
+#pal {
+    color: #71c6dd;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.login-form input[type="submit"],
+.login-form a {
+    background-color: #71c6dd;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
+
+.login-form input[type="submit"]:hover,
+.login-form a:hover {
+    background-color: #5599b5;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    
+}
+
+.login-form p {
+    color: #b2bdbd;
+    margin-top: 10px;
+}
+
+/* Center the login form in the middle of the screen */
+@media screen and (max-width: 500px) {
+    .login-form {
+        width: 90%;
+    }
+}
+
+.login_text p {
+    position: absolute;
+    background-color: #696d97;
+    width : 470px;
+    text-align: center;
+    left : 450px;
+    top:172px;
+    height: 30px;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 5px;
+    color: greenyellow;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+
+.register{
+    position: absolute;
+    left: 400px;
+    top : 270px;
+    color: white;
+    
+}

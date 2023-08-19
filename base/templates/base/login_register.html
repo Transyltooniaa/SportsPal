@@ -5,36 +5,78 @@
 
     {% block content %}
 
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
     {% if page == 'login' %}
 
+    <div class="login_text">
+        <p>Login</p>
+    </div>
 
-    <div>
-        <form method = "post" action = "">
+    <div class = "login-form">
+        <form method = "post" action = "" style="background-color: #3f4156;">
             {% csrf_token %}
-            <label>Username: </label>
-            <input type = "text" name = "username" placeholder="Enter Username" />
+            
+            <div class="move" style="background-color: #3f4156;">
 
-            <label>Password: </label>
-            <input type = "password" name = "password" placeholder="Enter Password" />
+                <div id="pal">
+                    <p style="background-color: #3f4156;color:#71c6dd;">find your Sport Pal</p>
+                </div>
 
-            <input type = "submit" value = "Login" />
-        </form>
+                <div class="username-password" style="background-color: #3f4156;">
+                    <div class="username_container" style="background-color: #3f4156;">
+                        <div id="username_text"style="background-color: #3f4156;">
+                            <label style="background-color: #3f4156;">Username: </label>
+                        </div>
 
-        <p> Haven't signed up yet?  </p>
-        <a href = "{% url 'register' %}"> Register</a>
+                        <div id="username_input" style="background-color: #3f4156;">
+                            <input type = "text" name = "username" placeholder="Enter Username"  />
+                        </div>
+                    </div>
+
+                    <div id="password_container">
+                        <div id="password"style="background-color: #3f4156;">
+                            <label style="background-color: #3f4156;">Password: </label>
+                        </div>
+
+                        <div id="password_input"style="background-color: #3f4156;">
+                            <input type = "password" name = "password" placeholder="Enter Password" />
+                        </div>
+                    </div>
+                </div>
+
+                <input type = "submit" value = "Login" style="background-color:#71c6dd;color:#3f4156;position: relative;right : 172px;font-size: 15px;" />
+            </form>
+
+            <p style="background-color: #3f4156;"> Haven't signed up yet?  </p>
+            <a href = "{% url 'register' %}" style="background-color:#4ebc6a;color:cream"> Register</a>
+        </div>
 
     </div>
 
     {% else %}
 
-    <div>
-        <form method = "post" action = "">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type = "submit" value = "Register" />
+    <div class = "register">
+        <div class="form_content">
+            <div class="form">
+                <form method = "post" action = "">
+            </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+        </div>
+
+            <div class="submit">
+                <input type = "submit" value = "Register" />
+            </div>
+
         </form>
 
-        <p> Already have an account?  </p>
+        <div class="register_text">
+            <p> Already have an account?  </p>
+        </div>
+        
         <a href = "{% url 'login' %}"> Login</a>
 
     </div>
