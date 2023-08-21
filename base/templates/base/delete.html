@@ -1,12 +1,28 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
-<form method = "POST" action="">
-    {% csrf_token %}
-    <p>Are you sure you want to delete {{obj}}?</p>
-    <a href = "{{request.META.HTTP_REFERER}}">Go Back</a>
-    <input type="submit" value="Confirm"  />
-    {{form.as_p}} 
-</form>
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/delete.css' %}">
+{% endblock %}
+
+<div class="container">
+    <div class="form-container">
+        <form method="POST" action="" style= "background-color: #3f4156;">
+            {% csrf_token %}
+            <div class="conf-message" >
+                <p style="background-color: #3f4156;">Are you sure you want to delete {{ obj }}?</p>
+            </div>
+
+            <div class="go-back-link" style="background-color: #3f4156;">
+                <a href="{{ request.META.HTTP_REFERER }}" style="background-color: #3f4156; color :lightgray;text-decoration: none;">Go Back</a>
+            </div>
+
+            <input class="confirm-button" type="submit" value="Confirm">
+            {{ form.as_p }}
+        </form>
+    </div>
+</div>
 
 {% endblock %}

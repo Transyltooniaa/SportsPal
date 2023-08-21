@@ -1,0 +1,80 @@
+
+/* Center the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+/* Style the form */
+.form-container {
+    height: 150px;
+    max-width: 500px; /* Increased max-width */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Updated box shadow */
+    color: lightgray; /* Text color */
+    background-color:#3f4156 /* Background color */
+}
+
+.conf-message {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.go-back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px; /* Increased margin top */
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.confirm-button {
+    display: block;
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px; /* Increased margin top */
+}
+
+.confirm-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for form fields */
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Additional styles for labels */
+form label {
+    display: block;
+    margin-bottom: 8px; /* Decreased margin bottom */
+    font-weight: bold;
+}
+
+.search_bar input[type="text"] {
+    background-color: white;
+    background-image: url(searchicon.png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    position: relative;
+    top: 5px;
+    height: 20px;
+}

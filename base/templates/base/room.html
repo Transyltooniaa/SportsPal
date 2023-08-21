@@ -1,20 +1,15 @@
 {% extends 'main.html' %}
 
-
 {% load static %}
 
-
-{% block content %} 
+{% block content %}
 
 <style>
     .room-container {
         display: grid;
-        grid-template-columns:  3fr 1fr ;
+        grid-template-columns: 2.8fr 1.7fr;
     }
 </style>
-
-
-
 
 
 {% block css %}
@@ -24,29 +19,29 @@
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
 {% endblock %}
 
-
-
 <div class="room-container">
 
     <div>
 
         <h1>{{room.name}}</h1>
+        <small>{{room.created|timesince}} </small>
+        <h4>Hosted By</h4>
+        <p>{{room.host.username}}</p>
 
+        <p>Description</p>
         <p>{{room.description}}</p>
 
 
         <div class="comment-wrapper">
             <h3>Conversation</h3>
-            <hr>
+
 
             {% for message in room_messages %}
             <div>
-                
                 {% if request.user == message.user %}
-                <a href = "{% url 'delete-message' message.id %}" >Delete</a>
+                <a href="{% url 'delete-message' message.id %}">Delete</a>
                 {% endif %}
-
-                <small>@{{message.user}} {{message.created|timesince}} ago </small>
+                <small>@{{message.user}} Sent {{message.created|timesince}} ago </small>
                 <p>{{message.body}}</p>
                 <hr>
             </div>
@@ -65,18 +60,16 @@
 
     </div>
 
-    <div>
-        <h3>Participants</h3>
-        <hr>
+    <div class = "participants">
+        <h3 style="background-color: #696d97;color:#e5e5e5">Participants</h3>
+
         {% for user in participants %}
-        <div>
-            <p>@{{user.username}}</p>
+        <div id = "username">
+            <p style="background-color:#3f4156";><i class="fa-solid fa-user fa-2xl" style = "position: relative;right:30px;color:lightgray"></i>@{{user.username}}</p>
         </div>
         {% endfor %}
     </div>
 
 </div>
 
-
 {% endblock %}
-
