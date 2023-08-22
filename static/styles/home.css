@@ -4,6 +4,7 @@
     color: #e5e5e5;
     letter-spacing: 1px;
     display: inline-block;
+
     
 }
 
@@ -38,12 +39,11 @@ button{
     font-weight: 500;
     display: inline-block;
     position: relative;
-    left : 210px;
-    top: 30px;
+    left : 175px;
+    top: 50px;
     color:#3f4156;
     height: 55px;
     padding-bottom: 25px;
-    padding-top: 120px;
     font-size: 15px;
     letter-spacing: 1px;
     border-radius: 10px;

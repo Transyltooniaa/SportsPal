@@ -5,17 +5,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles/navbar.css' %}">
 {% endblock %}
 
-<div class="navbar">
+<div class="navbar" style="background-color:#3f4156;">
 
-    <div class="logo">
-        <a href="/"> <h1 style = "color: white;">SportsPal</h1></a>
+    <div class="logo" style="background-color:#3f4156;">
+        <a href="/"> <h1 style = "color: white;" style = "background-color:#3f4156; text-decoration: none;">SportsPal</h1></a>
     </div>
 
 
     <div class="search_bar">
         <form method = "GET" action="{% url 'home' %}">
-            <span class="material-symbols-rounded">
-                </span>
             <input type = "text" name = "q" placeholder = "Search Rooms" />
         </form>
     </div>
@@ -23,18 +21,18 @@
     {% if request.user.is_authenticated %}
     
     <div class="profile">
-        <p style="color: white;"> Hello {{request.user}}</p>
-        <p><a href = "{'% url 'base/profile.html' message.user.id %}">@{{user.username}}</a></p>
+        <p style="color: white;background-color:#3f4156;"> Hello {{request.user}}</p>
+        <p style="background-color:#3f4156;"><a href = "{'% url 'base/profile.html' message.user.id %} " style="background-color:#3f4156;text-decoration: none;color:aqua;">@{{user.username}}</a></p>
     </div>
 
-    <div class="logout"><
-        <a href = "{% url 'logout' %}">Logout</a>
+    <div class="logout">
+        <a href = "{% url 'logout' %}" style="background-color:#3f4156;">Logout</a>
     </div>
 
     {% else %}
 
-    <div class="login"><
-        <a href = "{% url 'login' %}">Login</a>
+    <div class="login">
+        <a href = "{% url 'login' %}" style = "background-color:#3f4156;">Login</a>
     </div>
 
     {% endif %}

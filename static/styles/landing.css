@@ -290,3 +290,26 @@ a:visited {
 a:active {
   color: green;
 }
+
+.section{
+  display: flex;
+  justify-content: center;
+}
+
+.section p{
+  margin: 30px;
+  margin-right: 30px;
+  margin-top: 0px;
+  color: lightgray;
+  text-align: left;
+}
+
+.section h2{
+  margin: 30px;
+  margin-right: 30px;
+  margin-top: 0px;
+  color: cyan;
+  text-align: left;
+  font-size: 21px;
+  font-weight: 900;
+}

@@ -31,7 +31,8 @@
         background-image: url('searchicon.png');
         background-position: 10px 10px;
         background-repeat: no-repeat;
-        padding-left: 40px;
+    
+        border : 8px solid #3f4156;
     }
 
     /* Style the profile and logout links */
@@ -50,4 +51,3 @@
         text-decoration: none;
         color: white;
     }
-
