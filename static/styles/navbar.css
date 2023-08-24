@@ -33,6 +33,11 @@
         background-repeat: no-repeat;
     
         border : 8px solid #3f4156;
+        padding: 13px;
+        width: 250px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+       
     }
 
     /* Style the profile and logout links */
