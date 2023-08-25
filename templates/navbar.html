@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles/navbar.css' %}">
 {% endblock %}
 
-<div class="navbar" style="background-color:#3f4156;">
+<div class="navbar" style="background-color:#3f4156;z-index: 20;">
 
     <div class="logo" style="background-color:#3f4156;">
         <a href="/"> <h1 style = "color: white;" style = "background-color:#3f4156; text-decoration: none;">SportsPal</h1></a>
@@ -32,7 +32,7 @@
     {% else %}
 
     <div class="login">
-        <a href = "{% url 'login' %}" style = "background-color:#3f4156;">Login</a>
+        <a href = "{% url 'login' %}" style = "background-color:#3f4156;text-decoration: none;"><i class="fa-solid fa-right-to-bracket fa-shake fa-lg" style="position: relative; right: 10px;;"></i>Login</a>
     </div>
 
     {% endif %}

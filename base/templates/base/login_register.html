@@ -4,81 +4,123 @@
 
 
     {% block content %}
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css"> 
+    
     {% if page == 'login' %}
-
-    <div class="login_text">
-        <p>Login</p>
-    </div>
-
-    <div class = "login-form">
-        <form method = "post" action = "" style="background-color: #3f4156;">
-            {% csrf_token %}
-            
-            <div class="move" style="background-color: #3f4156;">
-
-                <div id="pal">
-                    <p style="background-color: #3f4156;color:#71c6dd;">find your Sport Pal</p>
-                </div>
-
-                <div class="username-password" style="background-color: #3f4156;">
-                    <div class="username_container" style="background-color: #3f4156;">
-                        <div id="username_text"style="background-color: #3f4156;">
-                            <label style="background-color: #3f4156;">Username: </label>
-                        </div>
-
-                        <div id="username_input" style="background-color: #3f4156;">
-                            <input type = "text" name = "username" placeholder="Enter Username"  />
-                        </div>
-                    </div>
-
-                    <div id="password_container">
-                        <div id="password"style="background-color: #3f4156;">
-                            <label style="background-color: #3f4156;">Password: </label>
-                        </div>
-
-                        <div id="password_input"style="background-color: #3f4156;">
-                            <input type = "password" name = "password" placeholder="Enter Password" />
-                        </div>
-                    </div>
-                </div>
-
-                <input type = "submit" value = "Login" style="background-color:#71c6dd;color:#3f4156;position: relative;right : 172px;font-size: 15px;" />
-            </form>
-
-            <p style="background-color: #3f4156;"> Haven't signed up yet?  </p>
-            <a href = "{% url 'register' %}" style="background-color:#4ebc6a;color:cream"> Register</a>
+    
+    <div class="lo-re">
+        <div class="login_text">
+            <p style = "height: 70px;width:450px;position: relative;top:110px;font-weight: 500;font-size: 25px;left:500px">Login</p>
         </div>
 
-    </div>
-
-    {% else %}
-
-    <div class = "register">
-        <div class="form_content">
-            <div class="form">
-                <form method = "post" action = "">
-            </div>
+        <div class = "login-form" >
+            <form method = "post" action = "" style="background-color: #3f4156;">
                 {% csrf_token %}
-                {{ form.as_p }}
-        </div>
+                
+                <div class="move" style="background-color: #3f4156;">
 
-            <div class="submit">
-                <input type = "submit" value = "Register" />
+                    <div id="pal">
+                        <p style="background-color: #3f4156;color:#71c6dd;">find your Sport Pal</p>
+                    </div>
+
+                    <div class="username-password" style="background-color: #3f4156;">
+                        <div class="username_container" style="background-color: #3f4156;">
+                            <div id="username_text"style="background-color: #3f4156;">
+                                <label style="background-color: #3f4156;">Username: </label>
+                            </div>
+
+                            <div id="username_input" style="background-color: #3f4156;">
+                                <input type = "text" name = "username" placeholder="Enter Username"  />
+                            </div>
+                        </div>
+
+                        <div id="password_container">
+                            <div id="password"style="background-color: #3f4156;">
+                                <label style="background-color: #3f4156;">Password: </label>
+                            </div>
+
+                            <div id="password_input"style="background-color: #3f4156;">
+                                <input type = "password" name = "password" placeholder="Enter Password" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type = "submit" value = "Login" style="background-color:#71c6dd;color:#3f4156;position: relative;right : 165px;font-size: 15px;" />
+                </form>
+
+                <p style="background-color: #3f4156;"> Haven't signed up yet?  </p>
+                <a href = "{% url 'register' %}" style="background-color:#4ebc6a;color:cream;text-decoration:none;"> Register</a>
             </div>
 
-        </form>
-
-        <div class="register_text">
-            <p> Already have an account?  </p>
         </div>
-        
-        <a href = "{% url 'login' %}"> Login</a>
 
+        {% else %}
+
+        <div class="container" style="background-color: #2d2d39;">
+            <form action="" method="post" style="background-color: #2d2d39;">
+                {% csrf_token %}
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default" >
+                        <div class="panel-heading" style="background-color: #2d2d39;color: lightgray;">Register</div>
+                        <div class="panel-body" >
+                            {% if error_message %}
+                                <p class="bg-danger p-d ml-b" style="color: lightgray;">{{ error_message }}</p>
+                            {% endif %}
+                        
+                            <div class="form-group clearfix">
+                                <label for="{{ form.username.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">Username<span class="text-red">*</span>:</label>
+                                <div class="col-md-6">
+                                    {{ form.username }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.email.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">Email<span class="text-red">*</span>:</label>
+                                <div class="col-md-6">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.password.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">Password<span class="text-red">*</span>:</label>
+                                <div class="col-md-6">
+                                    {{ form.password }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.password_repeat.id_for_label }}" class="col-md-4 control-label text-right"  style= "color: lightgray;">Confirm password:</label>
+                                <div class="col-md-6">
+                                    {{ form.password_repeat }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.first_name.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">First Name:</label>
+                                <div class="col-md-6">
+                                    {{ form.first_name }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.last_name.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">Last Name:</label>
+                                <div class="col-md-6">
+                                    {{ form.last_name }}
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label for="{{ form.phone_number.id_for_label }}" class="col-md-4 control-label text-right" style= "color: lightgray;">Phone Number:</label>
+                                <div class="col-md-6">
+                                    {{ form.phone_number }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-md-offset-4">
+                                <input type="submit" value="Register" class="btn btn-success">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
                 
     {%endif%}
