@@ -23,15 +23,39 @@ SportsPal is a web application designed to help college students find sports par
 ### Prerequisites
 
 - Python (https://www.python.org/)
-- Django (`pip install django`)
+- Django
 - HTML
 - CSS
 
 
-### Installation
+## GETTING STARTED
 
-1. Clone the repository:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+```
+https://github.com/Transyltooniaa/SportsPal
+```
+
+## Requirements
+
+#### django
+```
+pip install django
+```
+
+
+## EXECUTION
+Enter the command wriiten below to execute the program on command line terminal
+``` 
+cd SportsPal
+```
+```
+python3 manage.py runserver
+```
+Paste the below mentioned link on any web browser on your system
+```
+https://127.0.0.1:8000/
+```
 
 
 
@@ -54,10 +78,26 @@ SportsPal was developed to address the challenge of finding sports partners with
 
 SportsPal's future plans include the addition of sports tournaments and a dedicated blogging section. These features will enhance the overall experience and make SportsPal a comprehensive hub for college sports enthusiasts.
 
-## Contributing
+## CONTRIBUTING
 
-Contributions are welcome! If you have ideas for improvements, features, or bug fixes, feel free to submit pull requests or issues.
+We welcome contributions to the Beautiful Soup project! If you have any suggestions, bug reports, or feature requests, please open an issue on GitHub or submit a pull request. We appreciate your feedback and collaboration in making this project even better!
 
-## License
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## VERSIONING
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## AUTHORS
+
+* **Ajitesh Kumar Singh** - [Transyltooniaa](https://github.com/Transyltooniaa)
+
+## LICENSE
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## ACKNOWLEDGEMENTS
+* Travsersy Media
+* ChatGPT
+* Apna College
+* Stack Overflow
